@@ -1,0 +1,250 @@
+@mixin corners ($bg, $blr, $brr, $tlr, $trr, $pos) {
+    background: $bg;
+    width: 35%;
+    height: 85%;
+    border-bottom-left-radius: $blr;
+    border-bottom-right-radius: $brr;
+    border-top-left-radius: $tlr;
+    border-top-right-radius: $trr;
+    position: $pos;
+}
+%chats-1 {
+    width: 9rem;
+    height: 2rem;
+    padding: 10px 2px 2px 7px;
+    color: hsl(276, 55%, 52%);
+    font-size: 10px;
+    border-radius: 10px;
+    background-color: hsl(260, 6%, 91%);
+}
+%chats-2 {
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 11.5rem;
+    height: 2.5rem;
+    color: hsl(276, 55%, 52%);
+    font-size: 10px;
+    border-radius: 10px;
+    background-color: hsl(260, 6%, 91%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    background-color: rgb(201, 201, 201);
+    width: 80%;
+    height: 90vh;
+    margin: 1rem auto;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+// .left-corner {
+//     background: linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+//     width: 35%;
+//     height: 85%;
+//     border-bottom-left-radius: 50%;
+//     border-bottom-right-radius: 50%;
+//     position: absolute;
+//     left: -90px;
+// }
+// .right-corner {
+//     background: linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+//     opacity: 0.04;
+//     width: 35%;
+//     height: 85%;
+//     border-top-left-radius: 50%;
+//     border-top-right-radius: 50%;
+//     position: absolute;
+//     top: 88px;
+//     right: -90px;
+// }
+.left-corner {
+    @include corners (linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%)), 50%, 50%, 0, 0, absolute);
+    left: -90px;
+}
+.right-corner {
+    @include corners (linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%)), 0, 0, 50%, 50%, absolute);
+    opacity: 0.04;
+    top: 88px;
+    right: -90px;
+}
+.grp {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    left: -25px;
+}
+.chat {
+    width: 16.1rem;
+    height: 28rem;
+    background-color:  hsl(0, 0%, 100%);
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgb(172, 172, 172), -4px -4px 10px rgb(172, 172, 172);
+    padding: 13px;
+.top {
+    position: relative;
+    width: 14.5rem;
+    height: 100%;
+    background-color:  hsl(270, 20%, 96%);
+    border-radius: 17px;
+
+.chat-1 {
+    @extend %chats-1;
+}
+.chat-2 {
+    @extend %chats-1;
+}
+}
+.Ch {
+    display: flex;
+    margin-top: 5px;
+    margin-left: 8px;
+    flex-direction: column;
+    gap: 5px;
+}
+.images {
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    .img-1, .img-2, .img-3 {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 10px;
+    }
+}
+.Ch-2 {
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 12rem;
+    height: 2rem;
+    padding: 10px 2px 2px 7px;
+    color: hsl(271, 15%, 43%);
+    font-size: 10px;
+    border-radius: 10px;
+    background-color: hsl(260, 6%, 91%);
+}
+.Ch-3 {
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 8rem;
+    height: 2rem;
+    padding: 10px 2px 2px 7px;
+    color: hsl(271, 15%, 43%);
+    font-size: 10px;
+    border-radius: 10px;
+    background-color: hsl(260, 6%, 91%);
+}
+.Ch-4 {
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 10rem;
+    height: 4rem;
+    padding: 10px 2px 2px 7px;
+    color: hsl(276, 55%, 52%);
+    font-size: 10px;
+    border-radius: 10px;
+    background-color: hsl(260, 6%, 91%);
+}
+.Ch-5 {
+    @extend %chats-2;
+}
+.Ch-6 {
+    @extend %chats-2;
+}
+.goods {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.radio {
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    border: 1.5px solid white;
+    border-radius: 50%;
+}
+.price p {
+    font-size: 14px;
+    font-weight: 700;
+}
+}
+.top-div {
+    position: absolute;
+    top: -10px;
+    left: 68px;
+    width: 6rem;
+    height: 1.2rem;
+    background-color: white;
+    border-radius: 40px;
+    }
+.top-content {
+      width: 14.5rem;
+      height: 4rem;
+      background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+      border-top-right-radius: 17px;
+      border-top-left-radius: 17px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px; 
+    }
+    .left-top {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+    }
+    .left-top .txtx {
+        color: white;
+        font-size: 12px;
+    } 
+    .fa-caret-left, .fa-bars {
+        color: white;
+    }
+.text {
+    position: relative;
+    width: 26rem;
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.txt {
+    position: absolute;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+.txt .paragraph {
+    font-size: 15px;
+    color: hsl(271, 15%, 43%);
+}
+.txt .head {
+    font-size: 28px;
+    font-weight: bold;
+    color:  hsl(271, 36%, 24%);
+}
